@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-COMPATIBLE" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="赖祥燃, laixiangran@163.com, http://www.laixiangran.cn"/>
+    <title>animate - 学习示例</title>
+    <link rel="stylesheet" href="animate.min.css">
+    <style>
+        div, h1, p {
+            margin: 0;
+            padding: 0;
+        }
+
+        .animate_main {
+            width: 300px;
+            height: 150px;
+            border: 1px solid #9354de;
+            float: left;
+            padding: 10px;
+            margin-right: 10px;
+            margin-bottom: 10px;
+        }
+
+        .animate_main h1 {
+            font-size: 16px;
+        }
+
+        .animate_main p {
+            margin-top: 30px;
+        }
+
+        .animate_main p span {
+            font-size: 25px;
+            color: #be3940;
+            display: block;
+            margin-bottom: 30px;
+        }
+    </style>
+    <script>
+        var animateDescs = ['attentionSeekers', 'bouncingEntrances'];
+        var animateClass = {
+            attentionSeekers: ['bounce', 'flash', 'headShake', 'jello', 'pulse', 'rubberBand', 'shake', 'swing', 'tada', 'wobble'],
+            bouncingEntrances: ['bounceIn', 'bounceInDown', 'bounceInUp', 'bounceInLeft', 'bounceInRight']
+        };
+        var animateTitle = {
+            attentionSeekers: ['Attention Seekers', '引起注意力'],
+            bouncingEntrances: ['Bouncing Entrances', '弹跳起点']
+        };
+        var animateText = {
+            attentionSeekers: ['弹跳', '闪动', '摇头', '果冻', '心跳', '橡皮带', '抖动', '摇摆', 'tada', '晃动'],
+            bouncingEntrances: ['从里到外', '从上到下', '从下到上', '从左到右', '从右到左']
+        };
+        function load() {
+            // 生成DOM
+            var html = '';
+            for (var j = 0; j < animateDescs.length; j++) {
+                var animateDesc = animateDescs[j];
+                html += '<div id="' + animateDesc + '" class="animate_main"><h1>' + animateTitle[animateDesc][0] + ' - ' + animateTitle[animateDesc][1] + '</h1><p>';
+                html += '<span class="animate_text">' + animateTitle[animateDesc][0] + '!</span><select class="animate_select" name="' + animateDesc + '">';
+                var animateCls = animateClass[animateDesc];
+                for (var n = 0; n < animateCls.length; n++) {
+                    html += '<option value="' + animateCls[n] + '">' + animateCls[n] + ' - ' + animateText[animateDesc][n] + '</option>';
+                }
+                html += '</select><button class="animate_btn" name="' + animateDesc + '">触发动画</button></p></div>';
+            }
+            document.body.innerHTML = html;
+
+            // DOM注册事件
+            var animate_btns = document.querySelectorAll('.animate_btn');
+            var selects = document.querySelectorAll('.animate_select');
+            for (var i = 0; i < animate_btns.length; i++) {
+                var animate_btn = animate_btns[i];
+                var select = selects[i];
+                animate_btn.addEventListener('click', function () {
+                    animate(this.name);
+                });
+                select.addEventListener('change', function () {
+                    animate(this.name);
+                });
+            }
+        }
+
+        function animate(selector) {
+            var currentDiv = document.querySelector('#' + selector);
+            var currentSelectAnimate = currentDiv.querySelector('select').value;
+            var currentSpan = currentDiv.querySelector('span');
+            currentSpan.className = currentSelectAnimate + ' animated';
+            currentSpan.addEventListener('animationend', function () {
+                currentSpan.className = '';
+            });
+        }
+    </script>
+</head>
+<body onload="load()">
+
+</body>
+</html>
