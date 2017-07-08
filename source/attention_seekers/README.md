@@ -4,7 +4,7 @@
 
 ```css
 @keyframes bounce {
-    /* 设置from, 20%, 53%, 80%, to时间点的样式 */
+    /* 设置from(0%), 20%, 53%, 80%, to(100%)时间点的样式 */
     from, 20%, 53%, 80%, to {
         /* 设置对象动画的过渡类型为特定的cubic-bezier（贝塞尔曲线）类型，4个数值分别为0.215, 0.610, 0.355, 1.000 */
         animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
