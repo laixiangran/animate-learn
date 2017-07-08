@@ -2,7 +2,7 @@
 
 ## bounce - 弹跳
 
-```
+```css
 @keyframes bounce {
     /* 设置from, 20%, 53%, 80%, to时间点的样式 */
     from, 20%, 53%, 80%, to {
