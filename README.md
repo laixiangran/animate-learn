@@ -2,6 +2,10 @@
 
 [animate.css](https://daneden.github.io/animate.css/)
 
+## @keyframes
+
+指定动画名称和动画效果。@keyframes定义的动画名称用来被animation-name所使用。[详细描述](http://www.css88.com/book/css/rules/@keyframes.htm)
+
 ## animation
 
 复合属性。检索或设置对象所应用的动画特效。
