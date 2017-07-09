@@ -67,6 +67,7 @@
 
 ```css
 @keyframes headShake {
+
     0% {
         /* 设置对象X轴（水平方向）的平移为0 */
         transform: translateX(0);
@@ -101,6 +102,56 @@
 .headShake {
     animation-timing-function: ease-in-out; /* 设置过渡类型由慢到快再到慢 */
     animation-name: headShake;
+}
+```
+
+## jello - 果冻
+
+```css
+@keyframes jello {
+    from, 11.1%, to {
+        transform: none;
+    }
+
+    22.2% {
+        /* 设置对象X轴的（水平方向）扭曲为-12.5deg，对象Y轴的（水平方向）扭曲为-12.5deg */
+        transform: skewX(-12.5deg) skewY(-12.5deg);
+    }
+
+    33.3% {
+        /* 设置对象X轴的（水平方向）扭曲为6.25deg，对象Y轴的（水平方向）扭曲为6.25deg */
+        transform: skewX(6.25deg) skewY(6.25deg);
+    }
+
+    44.4% {
+        /* 设置对象X轴的（水平方向）扭曲为-3.125deg，对象Y轴的（水平方向）扭曲为-3.125deg */
+        transform: skewX(-3.125deg) skewY(-3.125deg);
+    }
+
+    55.5% {
+        /* 设置对象X轴的（水平方向）扭曲为1.5625deg，对象Y轴的（水平方向）扭曲为1.5625deg */
+        transform: skewX(1.5625deg) skewY(1.5625deg);
+    }
+
+    66.6% {
+        /* 设置对象X轴的（水平方向）扭曲为-0.78125deg，对象Y轴的（水平方向）扭曲为-0.78125deg */
+        transform: skewX(-0.78125deg) skewY(-0.78125deg);
+    }
+
+    77.7% {
+        /* 设置对象X轴的（水平方向）扭曲为0.390625deg，对象Y轴的（水平方向）扭曲为0.390625deg */
+        transform: skewX(0.390625deg) skewY(0.390625deg);
+    }
+
+    88.8% {
+        /* 设置对象X轴的（水平方向）扭曲为-0.1953125deg，对象Y轴的（水平方向）扭曲为-0.1953125deg */
+        transform: skewX(-0.1953125deg) skewY(-0.1953125deg);
+    }
+}
+
+.jello {
+    animation-name: jello;
+    transform-origin: center; /* 设置对象转换的原点位置为center */
 }
 ```
 
