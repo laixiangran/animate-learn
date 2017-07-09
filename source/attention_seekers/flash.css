@@ -1,13 +1,16 @@
 @keyframes flash {
-  from, 50%, to {
-    opacity: 1;
-  }
 
-  25%, 75% {
-    opacity: 0;
-  }
+    /* 设置from(0%), 50%, to(100%)时间点的样式 */
+    from, 50%, to {
+        opacity: 1; /* 设置透明度为1 */
+    }
+
+    /* 设置25%, 75%时间点的样式 */
+    25%, 75% {
+        opacity: 0; /* 设置透明度为0 */
+    }
 }
 
 .flash {
-  animation-name: flash;
+    animation-name: flash;
 }

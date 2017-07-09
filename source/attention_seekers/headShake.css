@@ -1,30 +1,36 @@
 @keyframes headShake {
-  0% {
-    transform: translateX(0);
-  }
+    0% {
+        /* 设置对象X轴（水平方向）的平移为0 */
+        transform: translateX(0);
+    }
 
-  6.5% {
-    transform: translateX(-6px) rotateY(-9deg);
-  }
+    6.5% {
+        /* 设置对象X轴（水平方向）的平移为-6px，设置对象在y轴上的旋转角度为-9deg */
+        transform: translateX(-6px) rotateY(-9deg);
+    }
 
-  18.5% {
-    transform: translateX(5px) rotateY(7deg);
-  }
+    18.5% {
+        /* 设置对象X轴（水平方向）的平移为5px，设置对象在y轴上的旋转角度为7deg */
+        transform: translateX(5px) rotateY(7deg);
+    }
 
-  31.5% {
-    transform: translateX(-3px) rotateY(-5deg);
-  }
+    31.5% {
+        /* 设置对象X轴（水平方向）的平移为-3px，设置对象在y轴上的旋转角度为-5deg */
+        transform: translateX(-3px) rotateY(-5deg);
+    }
 
-  43.5% {
-    transform: translateX(2px) rotateY(3deg);
-  }
+    43.5% {
+        /* 设置对象X轴（水平方向）的平移为2px，设置对象在y轴上的旋转角度为3deg */
+        transform: translateX(2px) rotateY(3deg);
+    }
 
-  50% {
-    transform: translateX(0);
-  }
+    50% {
+        /* 设置对象X轴（水平方向）的平移为0px */
+        transform: translateX(0);
+    }
 }
 
 .headShake {
-  animation-timing-function: ease-in-out;
-  animation-name: headShake;
+    animation-timing-function: ease-in-out; /* 设置过渡类型由慢到快再到慢 */
+    animation-name: headShake;
 }
