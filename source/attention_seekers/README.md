@@ -155,3 +155,28 @@
 }
 ```
 
+## pulse - 心跳
+
+```css
+@keyframes pulse {
+    from {
+        /* 设置3D缩放的X轴、Y轴、Z轴分别为1、1、1 */
+        transform: scale3d(1, 1, 1);
+    }
+
+    50% {
+        /* 设置3D缩放的X轴、Y轴、Z轴分别为1.05、1.05、1.05 */
+        transform: scale3d(1.05, 1.05, 1.05);
+    }
+
+    to {
+        /* 设置3D缩放的X轴、Y轴、Z轴分别为1、1、1 */
+        transform: scale3d(1, 1, 1);
+    }
+}
+
+.pulse {
+    animation-name: pulse;
+}
+```
+
