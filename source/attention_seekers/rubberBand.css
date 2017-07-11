@@ -1,33 +1,36 @@
 @keyframes rubberBand {
-  from {
-    transform: scale3d(1, 1, 1);
-  }
+    from {
+        /* 设置3D缩放的X轴、Y轴、Z轴分别为1、1、1 */
+        transform: scale3d(1, 1, 1);
+    }
 
-  30% {
-    transform: scale3d(1.25, 0.75, 1);
-  }
+    30% {
+        /* 设置3D缩放的X轴、Y轴、Z轴分别为1.25、0.75、1。根据实际的橡皮带的拉伸现象，此时沿X轴拉伸，则Y轴压缩 */
+        transform: scale3d(1.25, 0.75, 1);
+    }
 
-  40% {
-    transform: scale3d(0.75, 1.25, 1);
-  }
+    40% {
+        /* 设置3D缩放的X轴、Y轴、Z轴分别为0.75、1.25、1。根据实际的橡皮带的拉伸现象，此时沿X轴压缩，则Y轴拉伸 */
+        transform: scale3d(0.75, 1.25, 1);
+    }
 
-  50% {
-    transform: scale3d(1.15, 0.85, 1);
-  }
+    50% {
+        transform: scale3d(1.15, 0.85, 1);
+    }
 
-  65% {
-    transform: scale3d(.95, 1.05, 1);
-  }
+    65% {
+        transform: scale3d(.95, 1.05, 1);
+    }
 
-  75% {
-    transform: scale3d(1.05, .95, 1);
-  }
+    75% {
+        transform: scale3d(1.05, .95, 1);
+    }
 
-  to {
-    transform: scale3d(1, 1, 1);
-  }
+    to {
+        transform: scale3d(1, 1, 1);
+    }
 }
 
 .rubberBand {
-  animation-name: rubberBand;
+    animation-name: rubberBand;
 }

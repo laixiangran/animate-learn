@@ -2,6 +2,8 @@
 
 ## bounce - 弹跳
 
+此动画根据实际的**弹跳**现象 - 弹跳的高度越来越低，即Y轴的位移越来越小。
+
 ```css
 @keyframes bounce {
 
@@ -44,6 +46,8 @@
 
 ## flash - 闪动
 
+此动画根据实际的**闪动**现象 - 对象忽隐忽现，即透明度在1和0之间切换。
+
 ```css
 @keyframes flash {
 
@@ -64,6 +68,8 @@
 ```
 
 ## headShake - 摇头
+
+此动画根据实际的**摇头**现象 - 摇头过程水平移动先小到大再变小直到停止，竖直方向会有稍微的倾斜。
 
 ```css
 @keyframes headShake {
@@ -106,6 +112,8 @@
 ```
 
 ## jello - 果冻
+
+此动画根据实际的**果冻**现象 - 果冻变形的幅度由小到大再小，直到停止。
 
 ```css
 @keyframes jello {
@@ -157,6 +165,8 @@
 
 ## pulse - 心跳
 
+此动画根据实际的**心跳**现象 - 心跳的过程中，心脏变大变小。
+
 ```css
 @keyframes pulse {
     from {
@@ -177,6 +187,49 @@
 
 .pulse {
     animation-name: pulse;
+}
+```
+
+## rubberBand - 橡皮带
+
+此动画根据实际的**橡皮带**拉伸现象 - 沿X轴拉伸，则Y轴压缩。沿X轴压缩，则Y轴拉伸。
+
+```css
+@keyframes rubberBand {
+    from {
+        /* 设置3D缩放的X轴、Y轴、Z轴分别为1、1、1 */
+        transform: scale3d(1, 1, 1);
+    }
+
+    30% {
+        /* 设置3D缩放的X轴、Y轴、Z轴分别为1.25、0.75、1。根据实际的橡皮带的拉伸现象，此时沿X轴拉伸，则Y轴压缩 */
+        transform: scale3d(1.25, 0.75, 1);
+    }
+
+    40% {
+        /* 设置3D缩放的X轴、Y轴、Z轴分别为0.75、1.25、1。根据实际的橡皮带的拉伸现象，此时沿X轴压缩，则Y轴拉伸 */
+        transform: scale3d(0.75, 1.25, 1);
+    }
+
+    50% {
+        transform: scale3d(1.15, 0.85, 1);
+    }
+
+    65% {
+        transform: scale3d(.95, 1.05, 1);
+    }
+
+    75% {
+        transform: scale3d(1.05, .95, 1);
+    }
+
+    to {
+        transform: scale3d(1, 1, 1);
+    }
+}
+
+.rubberBand {
+    animation-name: rubberBand;
 }
 ```
 
