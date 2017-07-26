@@ -260,3 +260,41 @@
 }
 ```
 
+## swing - 摇摆
+
+此动画根据实际的**物体上下摇摆**现象 - 沿X轴来回移动直到停止。
+
+```css
+@keyframes swing {
+    /* 设置Z轴的3D旋转为15deg */
+    20% {
+        transform: rotate3d(0, 0, 1, 15deg);
+    }
+
+    /* 设置Z轴的3D旋转为-10deg */
+    40% {
+        transform: rotate3d(0, 0, 1, -10deg);
+    }
+
+    /* 设置Z轴的3D旋转为5deg */
+    60% {
+        transform: rotate3d(0, 0, 1, 5deg);
+    }
+
+    /* 设置Z轴的3D旋转为-5deg */
+    80% {
+        transform: rotate3d(0, 0, 1, -5deg);
+    }
+
+    /* 设置Z轴的3D旋转为0deg */
+    to {
+        transform: rotate3d(0, 0, 1, 0deg);
+    }
+}
+
+.swing {
+    transform-origin: top center; /* 设置对象转换的原点位置 */
+    animation-name: swing;
+}
+```
+
