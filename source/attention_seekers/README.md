@@ -113,7 +113,7 @@
 
 ## jello - 果冻
 
-此动画根据实际的**果冻**现象 - 果冻变形的幅度由小到大再小，直到停止。
+此动画根据实际的**果冻变形**现象 - 果冻变形的幅度由小到大再小，直到停止。
 
 ```css
 @keyframes jello {
@@ -192,7 +192,7 @@
 
 ## rubberBand - 橡皮带
 
-此动画根据实际的**橡皮带**拉伸现象 - 沿X轴拉伸，则Y轴压缩。沿X轴压缩，则Y轴拉伸。
+此动画根据实际的**橡皮带拉伸**现象 - 沿X轴拉伸，则Y轴压缩。沿X轴压缩，则Y轴拉伸。
 
 ```css
 @keyframes rubberBand {
@@ -230,6 +230,33 @@
 
 .rubberBand {
     animation-name: rubberBand;
+}
+```
+
+## shake - 抖动
+
+此动画根据实际的**身体抖动**现象 - 沿X轴来回移动直到停止。
+
+```css
+@keyframes shake {
+    /* 时间节点在开始和结束时设置X轴的3D位移为0 */
+    from, to {
+        transform: translate3d(0, 0, 0);
+    }
+
+    /* 时间节点在10%, 30%, 50%, 70%, 90%时设置X轴的3D位移为-10px */
+    10%, 30%, 50%, 70%, 90% {
+        transform: translate3d(-10px, 0, 0);
+    }
+
+    /* 时间节点在20%, 40%, 60%, 80%时设置X轴的3D位移为10px */
+    20%, 40%, 60%, 80% {
+        transform: translate3d(10px, 0, 0);
+    }
+}
+
+.shake {
+    animation-name: shake;
 }
 ```
 

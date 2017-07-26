@@ -1,12 +1,15 @@
 @keyframes shake {
+    /* 时间节点在开始和结束时设置X轴的3D位移为0 */
     from, to {
         transform: translate3d(0, 0, 0);
     }
 
+    /* 时间节点在10%, 30%, 50%, 70%, 90%时设置X轴的3D位移为-10px */
     10%, 30%, 50%, 70%, 90% {
         transform: translate3d(-10px, 0, 0);
     }
 
+    /* 时间节点在20%, 40%, 60%, 80%时设置X轴的3D位移为10px */
     20%, 40%, 60%, 80% {
         transform: translate3d(10px, 0, 0);
     }
