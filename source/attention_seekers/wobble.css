@@ -5,22 +5,27 @@
         transform: none;
     }
 
+    /* 设置对象的X轴的3D位移分为-25%，设置对象的Z轴的3D旋转为-5deg */
     15% {
         transform: translate3d(-25%, 0, 0) rotate3d(0, 0, 1, -5deg);
     }
 
+    /* 设置对象的X轴的3D位移分为20%，设置对象的Z轴的3D旋转为3deg */
     30% {
         transform: translate3d(20%, 0, 0) rotate3d(0, 0, 1, 3deg);
     }
 
+    /* 设置对象的X轴的3D位移分为15%，设置对象的Z轴的3D旋转为-3deg */
     45% {
         transform: translate3d(-15%, 0, 0) rotate3d(0, 0, 1, -3deg);
     }
 
+    /* 设置对象的X轴的3D位移分为10%，设置对象的Z轴的3D旋转为2deg */
     60% {
         transform: translate3d(10%, 0, 0) rotate3d(0, 0, 1, 2deg);
     }
 
+    /* 设置对象的X轴的3D位移分为-5%，设置对象的Z轴的3D旋转为-1deg */
     75% {
         transform: translate3d(-5%, 0, 0) rotate3d(0, 0, 1, -1deg);
     }
