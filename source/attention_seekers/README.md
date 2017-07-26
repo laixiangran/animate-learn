@@ -262,7 +262,7 @@
 
 ## swing - 摇摆
 
-此动画根据实际的**物体上下摇摆**现象 - 沿X轴来回移动直到停止。
+此动画根据实际的**物体上下摇摆**现象 - 沿Z轴来回旋转直到停止。
 
 ```css
 @keyframes swing {
@@ -295,6 +295,43 @@
 .swing {
     transform-origin: top center; /* 设置对象转换的原点位置 */
     animation-name: swing;
+}
+```
+
+## tada - 敲锣
+
+此动画根据实际的**敲锣震动**现象 - 沿X轴来回移动直到停止。
+
+```css
+@keyframes tada {
+    /* 设置对象的X,Y,Z的3D缩放分为1 */
+    from {
+        transform: scale3d(1, 1, 1);
+    }
+
+    /* 设置对象的X,Y,Z的3D缩放分为0.9，设置对象的Z轴的3D旋转为-3deg */
+    10%, 20% {
+        transform: scale3d(.9, .9, .9) rotate3d(0, 0, 1, -3deg);
+    }
+
+    /* 设置对象的X,Y,Z的3D缩放分为1.1，设置对象的Z轴的3D旋转为3deg */
+    30%, 50%, 70%, 90% {
+        transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+    }
+
+    /* 设置对象的X,Y,Z的3D缩放分为1.1，设置对象的Z轴的3D旋转为-3deg */
+    40%, 60%, 80% {
+        transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+    }
+
+    /* 设置对象的X,Y,Z的3D缩放分为1 */
+    to {
+        transform: scale3d(1, 1, 1);
+    }
+}
+
+.tada {
+    animation-name: tada;
 }
 ```
 
